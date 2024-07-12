@@ -22,7 +22,7 @@ import LocalForm from './components/LocalForm.vue'
         <p>
           Created by <a href="https://github.com/alessandrojean" target="_blank">Alessandro Jean</a>.<br class="sm:hidden" />
           Forked by <a href="https://github.com/animeboynz" target="_blank">Animeboynz</a>.<br class="sm:hidden" />
-          Source code available on <a href="https://github.com/Animeboynz/tachi-local" target="_blank">GitHub</a>.
+          Source code available on <a href="https://github.com/Animeboynz/mihon-local" target="_blank">GitHub</a>.
         </p>
       </div>
     </footer>
