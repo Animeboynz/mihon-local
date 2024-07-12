@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  button, .button {
+    @apply flex items-center gap-2.5 rounded-md shadow-sm cursor-pointer
+    text-sm font-medium select-none text-gray-300
+    border border-gray-600 px-4 py-2 bg-gray-800
+    motion-safe:transition-shadow focus:outline-none
+    not-disabled:hover:bg-gray-700 not-disabled:active:bg-gray-600
+    focus-visible:ring-2 focus-visible:ring-primary-700
+    focus-visible:ring-offset-2;
+
+    svg {
+      @apply text-gray-400 -ml-1;
+    }
+
+    &.button-rounded {
+      @apply px-2 rounded-full;
+    }
+
+    &.button-primary {
+      @apply bg-primary-700 border-primary-700 text-white
+      not-disabled:hover:bg-primary-800 not-disabled:hover:border-primary-800
+      not-disabled:active:bg-primary-900 not-disabled:active:border-primary-900;
+
+      svg {
+        @apply text-white;
+      }
+    }
+
+    &.button-ghost {
+      @apply shadow-none bg-transparent border-transparent
+      text-gray-400 not-disabled:hover:bg-gray-600/10
+      not-disabled:hover:text-gray-300 not-disabled:active:bg-gray-500/20
+      not-disabled:active:text-gray-200;
+
+      svg {
+        @apply text-gray-400;
+      }
+
+      &:not(:disabled):where(:hover, :active) svg {
+        @apply text-gray-300;
+      }
+    }
+  }
+
+  input[type='text'], input[type='search'], textarea, select {
+    @apply rounded-md shadow-sm border-gray-600 bg-gray-800 text-gray-300
+    motion-safe:transition disabled:opacity-50;
+
+    &:focus {
+      @apply border-primary-700 outline-none ring-2 ring-primary-700/30;
+    }
+  }
+
+  input[type='checkbox'] {
+    @apply rounded checked:!bg-primary-700 shadow-sm border-gray-600
+    motion-safe:transition disabled:opacity-50 bg-gray-800;
+
+    &:focus {
+      @apply border-primary-700 outline-none
+      ring-2 ring-primary-700/30 ring-offset-0;
+    }
+  }
+}
