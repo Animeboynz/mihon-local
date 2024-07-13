@@ -13,7 +13,7 @@ if (import.meta.env.VITE_APP_ANALYTICS_ID?.length) {
     }
   })
 
-  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VITE_APP_ANALYTICS_ID}`
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_APP_ANALYTICS_ID}`
 
   document.body.appendChild(analyticsScript)
 }
