@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-if (process.env.VITE_APP_ANALYTICS_ID?.length) {
+if (import.meta.env.VITE_APP_ANALYTICS_ID?.length) {
   const analyticsScript = document.createElement('script')
 
   analyticsScript.addEventListener('load', () => {
@@ -9,7 +9,7 @@ if (process.env.VITE_APP_ANALYTICS_ID?.length) {
       function gtag() { dataLayer.push(arguments) }
 
       gtag('js', new Date())
-      gtag('config', process.env.VITE_APP_ANALYTICS_ID)
+      gtag('config', import.meta.env.VITE_APP_ANALYTICS_ID)
     }
   })
 
