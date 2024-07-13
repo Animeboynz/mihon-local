@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-if (import.meta.env.VITE_APP_ANALYTICS_ID?.length) {
+if (process.env.VITE_APP_ANALYTICS_ID?.length) {
   const analyticsScript = document.createElement('script')
 
   analyticsScript.addEventListener('load', () => {
@@ -9,11 +9,11 @@ if (import.meta.env.VITE_APP_ANALYTICS_ID?.length) {
       function gtag() { dataLayer.push(arguments) }
 
       gtag('js', new Date())
-      gtag('config', import.meta.env.VITE_APP_ANALYTICS_ID)
+      gtag('config', process.env.VITE_APP_ANALYTICS_ID)
     }
   })
 
-  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_APP_ANALYTICS_ID}`
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VITE_APP_ANALYTICS_ID}`
 
   document.body.appendChild(analyticsScript)
 }
