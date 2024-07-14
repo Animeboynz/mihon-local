@@ -1,7 +1,7 @@
 # Mihon Local Source JSON Generator
 
-A Mihon-ified, dark theme version of [tachi-local](https://github.com/alessandrojean/tachi-local) originally created by [Alessandro Jean](https://github.com/alessandrojean/)
-A tool that helps you to easily create the JSON file with metadata.
+A Mihon-ified, dark theme version of [tachi-local](https://github.com/alessandrojean/tachi-local), a tool that helps you to easily create the JSON metadata files for the Mihon Local Source.
+Originally created by [Alessandro Jean](https://github.com/alessandrojean/).
 
 ## License
 
